@@ -1,0 +1,32 @@
+language: python
+dist: trusty
+python:
+- '2.7'
+- '3.6'
+env:
+  matrix:
+  - RAMP_KIT="titanic"
+  - RAMP_KIT="boston_housing"
+  - RAMP_KIT="iris"
+  - RAMP_KIT="HEP_tracking"
+  - RAMP_KIT="epidemium2_cancer_mortality"
+  - RAMP_KIT="HEP_detector_anomalies"
+  - RAMP_KIT="drug_spectra"
+  - RAMP_KIT="air_passengers"
+  - RAMP_KIT="el_nino"
+  - RAMP_KIT="sea_ice"
+  - RAMP_KIT="mouse_cytometry"
+  - RAMP_KIT="MNIST"
+  - RAMP_KIT="mars_craters"
+  - RAMP_KIT="california_rainfall"
+  - RAMP_KIT="california_rainfall_test"
+  - RAMP_KIT="fake_news"
+  - RAMP_KIT="MNIST_simplified"
+  - RAMP_KIT="kaggle_seguro"
+  - RAMP_KIT="solar_wind"
+  - RAMP_KIT="supernovae"
+matrix:
+  allow_failures:
+  - env: RAMP_KIT="solar_wind"
+install: source build_ci/travis/install.sh
+script: pytest -s -v ../test_kit.py

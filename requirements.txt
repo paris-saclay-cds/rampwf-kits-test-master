@@ -1,0 +1,4 @@
+pytest
+gitpython
+nbconvert
+jupyter_client
