@@ -24,9 +24,12 @@ env:
   - RAMP_KIT="MNIST_simplified"
   - RAMP_KIT="kaggle_seguro"
   - RAMP_KIT="solar_wind"
+  - RAMP_KIT="autism"
+  - RAMP_KIT="mechanics"
+  - RAMP_KIT="storm_forecast"
   - RAMP_KIT="supernovae"
 matrix:
   allow_failures:
-  - env: RAMP_KIT="solar_wind"
+#  - env: RAMP_KIT="solar_wind"
 install: source build_ci/travis/install.sh
 script: pytest -s -v ../test_kit.py
