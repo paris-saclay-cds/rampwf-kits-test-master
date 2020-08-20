@@ -2,7 +2,6 @@ language: python
 dist: trusty
 python:
 - '3.6'
-- '3.7'
 env:
   matrix:
   - RAMP_KIT="titanic"
