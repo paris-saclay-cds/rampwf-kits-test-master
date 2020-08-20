@@ -21,6 +21,16 @@ def test_submission_kit():
             ramp_kit_dir=kit_dir, ramp_data_dir=kit_dir,
             submission='starting_kit', is_pickle=True,
             save_output=True, retrain=True)
+    elif kit == 'autism':
+        assert_submission(
+            ramp_kit_dir=kit_dir, ramp_data_dir=kit_dir,
+            submission='starting_kit_anatomy')
+        assert_submission(
+            ramp_kit_dir=kit_dir, ramp_data_dir=kit_dir,
+            submission='starting_kit_functional')
+        assert_submission(
+            ramp_kit_dir=kit_dir, ramp_data_dir=kit_dir,
+            submission='combine_anatomy_functional')
     else:
         assert_submission(
             ramp_kit_dir=kit_dir, ramp_data_dir=kit_dir,
