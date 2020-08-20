@@ -35,7 +35,7 @@ allow_failure_repos = [{'env': 'RAMP_KIT="{}"'.format(repo)}
 travis_yml = {
     'language': 'python',
     'dist': 'trusty',
-    'python': ['2.7', '3.6'],
+    'python': ['3.6', '3.7'],
     'env': {'matrix': name_repos},
     'matrix': {'allow_failures': allow_failure_repos},
     'install': 'source build_ci/travis/install.sh',
