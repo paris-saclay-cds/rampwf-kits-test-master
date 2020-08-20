@@ -20,7 +20,7 @@ def test_submission_kit():
         assert_submission(
             ramp_kit_dir=kit_dir, ramp_data_dir=kit_dir,
             submission='starting_kit', is_pickle=True,
-            save_y_preds=True, retrain=True)
+            save_output=True, retrain=True)
     else:
         assert_submission(
             ramp_kit_dir=kit_dir, ramp_data_dir=kit_dir,
